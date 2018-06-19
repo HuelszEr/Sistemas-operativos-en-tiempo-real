@@ -1,0 +1,7 @@
+#!/bin/bash
+mknod -m 666 /dev/rtai_shm c 10 254
+for n in 'seq 0 9'
+do
+	f=/dev/rtf$n
+	mknod -m 666 $f c 150 $n
+done
